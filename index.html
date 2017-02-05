@@ -18,11 +18,12 @@
 	<script type="text/javascript">
 		function runAway(){
 			// Feel free to add more pages!
-		    var dummyPages = ["water.html"];
+		    var dummyPages = ["water.html","whitehouse.html","msn.html","this-day.html","abcnews.html","monster.html","wikipedia.html"];
 		    for(counter=0; counter<dummyPages.length; ++counter){
+		      url = "./pages/"+dummyPages[counter];
 		      // This pushState() function is what loads the pages in the browser's history without
 		      // actually navigating to each individual page.
-		      window.history.pushState(null, "Error", "./pages/"+dummyPages[counter]);
+		      window.history.pushState(null, "Error", url);
 		    }
 		    // reassigning the window location is what actually navigates us to a different web page
 		    window.location.assign("https://google.com");
