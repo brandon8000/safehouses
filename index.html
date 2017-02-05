@@ -1,0 +1,31 @@
+<head>
+	<title>Safe Houses - Obscure Browsing History for Safety</title>
+	<style type="text/css">
+		#escapeButton{
+			color: red;
+			width: 100%;
+			position: fixed;
+			opacity: 0.6;
+			zIndex: 110;
+			bottom: 5%;
+		}
+	</style>
+</head>
+<body>
+	<h1>Safe Houses</h1>
+	<p>You have people that need to keep their web browsing history private. We offer safe passage through multiple webpages so that their browsing history is flooded with harmless sites.<br>Just copy and paste the button below onto your web pages and give your users peace of mind.</p>
+	<button id='escapeButton' onclick='runAway()'>Safely Exit This Site!</button>
+	<script type="text/javascript">
+		function runAway(){
+			// Feel free to add more pages!
+		    var dummyPages = ["water.html"];
+		    for(counter=0; counter<dummyPages.length; ++counter){
+		      // This pushState() function is what loads the pages in the browser's history without
+		      // actually navigating to each individual page.
+		      window.history.pushState(null, "Error", "./pages/"+dummyPages[counter]);
+		    }
+		    // reassigning the window location is what actually navigates us to a different web page
+		    window.location.assign("https://google.com");
+		};
+	</script>
+</body>
