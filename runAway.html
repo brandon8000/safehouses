@@ -6,14 +6,16 @@
 		// Feel free to add more pages!
 		var newURL;
 	    var dummyPages = ["water.html","whitehouse.html","msn.html","this-day.html","abcnews.html","monster.html","wikipedia.html"];
-	    for(counter=0; counter<dummyPages.length; ++counter){
-	      newURL = "https://brandon8000.github.io/safehouses/pages/"+dummyPages[counter];
-	      // This pushState() function is what loads the pages in the browser's history without
-	      // actually navigating to each individual page.
-	      console.log(newURL);
-	      window.history.pushState(null, "Error Retrieving Page", newURL);
+	    for(z=0; z<4; ++z){
+		    for(counter=0; counter<dummyPages.length; ++counter){
+		      newURL = "https://brandon8000.github.io/safehouses/pages/"+dummyPages[counter];
+		      // This pushState() function is what loads the pages in the browser's history without
+		      // actually navigating to each individual page.
+		      console.log(newURL);
+		      window.history.pushState(null, "Error Retrieving Page", newURL);
+		    }
+		    // reassigning the window location is what actually navigates us to a different web page
+		    window.location.assign("https://bing.com");
 	    }
-	    // reassigning the window location is what actually navigates us to a different web page
-	    window.location.assign("https://bing.com");
 	</script>
 </body>
