@@ -4,14 +4,16 @@
 <body>
 	<script type="text/javascript">
 		// Feel free to add more pages!
+		var newURL;
 	    var dummyPages = ["water.html","whitehouse.html","msn.html","this-day.html","abcnews.html","monster.html","wikipedia.html"];
 	    for(counter=0; counter<dummyPages.length; ++counter){
-	      var newURL = "./pages/"+dummyPages[counter];
+	      newURL = "/pages/"+dummyPages[counter];
 	      // This pushState() function is what loads the pages in the browser's history without
 	      // actually navigating to each individual page.
+	      console.log(newURL);
 	      window.history.pushState(null, "Error Retrieving Page", newURL);
 	    }
 	    // reassigning the window location is what actually navigates us to a different web page
-	    window.location.assign("https://google.com");
+	    window.location.assign("https://bing.com");
 	</script>
 </body>
